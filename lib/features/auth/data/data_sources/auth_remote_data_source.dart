@@ -25,7 +25,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource{
       }
       return response.user!.id;
     } catch (e) {
-      throw e.toString();
+      throw ServerException(e.toString());
     }
   }
 
@@ -40,7 +40,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource{
       }
       return response.user!.id;
     } catch (e) {
-      throw e.toString();
+      throw ServerException(e.toString());
     }
   }
   
